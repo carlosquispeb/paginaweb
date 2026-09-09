@@ -1,62 +1,66 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accesorios Style</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50">
 
-  <!-- NAVBAR -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-2xl font-bold text-indigo-600">Accesorios<span class="text-gray-800">Style</span></h1>
-      <div class="hidden md:flex gap-6 text-gray-700 font-medium">
-        <a href="#" class="hover:text-indigo-600">Inicio</a>
-        <a href="#" class="hover:text-indigo-600">Productos</a>
-        <a href="#" class="hover:text-indigo-600">Contacto</a>
-      </div>
+<header class="bg-pink-200 shadow-md">
+
+    <div class="max-w-6xl mx-auto px-6 py-4">
+
+        <div class="flex justify-between items-center">
+
+            <!-- Nombre de la tienda -->
+            <div>
+                <h1 class="text-2xl font-bold text-pink-700">
+                     Bella Accesorios
+                </h1>
+
+                <p class="text-sm text-gray-600">
+                    Collares, aretes y mucho más
+                </p>
+            </div>
+
+        
+            <nav>
+                <ul class="flex gap-5">
+
+                    <li>
+                        <a href="#inicio"
+                           class="font-semibold hover:text-pink-700">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#productos"
+                           class="font-semibold hover:text-pink-700">
+                            Productos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#nosotros"
+                           class="font-semibold hover:text-pink-700">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contacto"
+                           class="font-semibold hover:text-pink-700">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section class="text-center py-20 px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-      Accesorios que <span class="text-indigo-600">marcan estilo</span>
-    </h2>
-    <p class="text-gray-600 max-w-xl mx-auto mb-8">
-      Collares, aretes, pulseras y más — encuentra el accesorio perfecto para cada ocasión.
-    </p>
+</header>
+```
 
-    <!-- BOTONES -->
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-colors duration-200">
-        Ver catálogo
-      </button>
-      <button class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-        Contactar
-      </button>
-    </div>
-  </section>
+**Importante:** en tu `<head>` de `index.html` debes tener Tailwind:
 
-  <!-- PRODUCTO DE EJEMPLO -->
-  <section class="max-w-6xl mx-auto px-6 py-10">
-    <div class="bg-white rounded-lg shadow-md p-6 max-w-sm mx-auto text-center">
-      <img src="https://via.placeholder.com/300x300" alt="Accesorio" class="rounded-md mb-4 mx-auto">
-      <h3 class="text-lg font-semibold text-gray-900 mb-2">Collar Luna</h3>
-      <p class="text-gray-500 mb-4">S/ 45.00</p>
-      <button class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2 px-4 rounded-md transition">
-        Agregar al carrito
-      </button>
-    </div>
-  </section>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-10">
-    <p>&copy; 2026 AccesoriosStyle. Todos los derechos reservados.</p>
-  </footer>
 
-</body>
-</html>
