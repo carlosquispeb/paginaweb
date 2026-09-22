@@ -7,56 +7,65 @@
   <link rel="stylesheet" href="estilos.css">
   
   <script src="https://cdn.tailwindcss.com"></script>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col">
+<body class="bg-rose-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col">
 
-  <header class="bg-pink-200/90 backdrop-blur-md sticky top-0 z-40 border-b border-pink-300 shadow-sm">
+  <!-- HEADER CON TU NOMBRE EN EL ENCABEZADO -->
+  <header class="bg-pink-200/90 backdrop-blur-md sticky top-0 z-40 border-b border-pink-300 shadow-md transition-all duration-300">
     <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
       
       <a href="#inicio" class="group text-center sm:text-left">
-        <h1 class="text-3xl font-extrabold tracking-tight text-pink-700 group-hover:scale-105 transition-transform">
+        <h1 class="text-3xl font-extrabold tracking-tight text-pink-700 group-hover:scale-105 transition-transform duration-300">
           Bella Accesorios
         </h1>
         <p class="text-xs text-pink-800 font-medium tracking-wide">Collares, aretes y mucho más</p>
       </a>
 
-      <nav>
-        <ul class="flex items-center gap-6 text-sm font-bold text-pink-900">
-          <li><a href="#inicio" class="hover:text-pink-600 hover:bg-white/50 px-3 py-1.5 rounded-lg transition-all">Inicio</a></li>
-          <li><a href="#nosotros" class="hover:text-pink-600 hover:bg-white/50 px-3 py-1.5 rounded-lg transition-all">Nosotros</a></li>
-        </ul>
-      </nav>
+      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <nav>
+          <ul class="flex items-center gap-4 text-sm font-bold text-pink-900">
+            <li><a href="#inicio" class="hover:text-pink-600 hover:bg-white/60 px-3 py-1.5 rounded-lg transition-all duration-200">Inicio</a></li>
+            <li><a href="#nosotros" class="hover:text-pink-600 hover:bg-white/60 px-3 py-1.5 rounded-lg transition-all duration-200">Nosotros</a></li>
+          </ul>
+        </nav>
+
+        <!-- NOMBRE DEL DESARROLLADOR EN EL ENCABEZADO -->
+        <div class="bg-white/80 border border-pink-300 text-pink-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+          <span class="w-2 h-2 bg-pink-500 rounded-full animate-ping"></span>
+          <span>Desarrollado por: <strong>Carlos Daniel Quispe</strong></span>
+        </div>
+      </div>
 
     </div>
   </header>
 
-  <section id="inicio" class="relative overflow-hidden py-20 px-6 bg-gradient-to-b from-pink-100 via-pink-50 to-slate-50 text-center">
+  <!-- HERO SECTION CON EFECTOS MEJORADOS -->
+  <section id="inicio" class="relative overflow-hidden py-20 px-6 bg-gradient-to-b from-pink-200 via-pink-100 to-rose-50 text-center">
     <div class="max-w-3xl mx-auto">
       
-      <span class="inline-block bg-pink-200 text-pink-800 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 border border-pink-300 shadow-sm">
+      <span class="inline-block bg-pink-300/80 text-pink-900 text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider mb-6 border border-pink-400 shadow-sm animate-pulse">
         Nueva Colección 2026
       </span>
       
       <h2 class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-6">
-        Accesorios que <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600">marcan estilo</span>
+        Accesorios que <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 animate-gradient">marcan estilo</span>
       </h2>
       
-      <p class="text-slate-600 text-base sm:text-xl max-w-xl mx-auto mb-10 font-medium leading-relaxed">
+      <p class="text-slate-700 text-base sm:text-xl max-w-xl mx-auto mb-10 font-medium leading-relaxed">
         Encuentra el detalle perfecto para resaltar tu elegancia en cada ocasión. Diseños exclusivos elaborados con calidad premium.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#productos" class="inline-block bg-indigo-600 hover:bg-indigo-700 hover:scale-105 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 text-center">
+        <a href="#productos" class="inline-block bg-indigo-600 hover:bg-indigo-700 hover:scale-105 active:scale-95 text-white font-semibold py-3 px-6 rounded-lg shadow-lg shadow-indigo-500/30 transition-all duration-300 text-center">
           Empezar ahora
         </a>
         
-        <button onclick="toggleModal('modal-catalogo')" class="bg-indigo-600 hover:bg-indigo-700 hover:scale-105 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200">
+        <button onclick="toggleModal('modal-catalogo')" class="bg-pink-600 hover:bg-pink-700 hover:scale-105 active:scale-95 text-white font-semibold py-3 px-6 rounded-lg shadow-lg shadow-pink-500/30 transition-all duration-300">
           Ver catálogo
         </button>
 
-        <button onclick="toggleModal('modal-contacto')" class="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white hover:scale-105 font-semibold py-3 px-6 rounded-lg transition-all duration-200">
+        <button onclick="toggleModal('modal-contacto')" class="border-2 border-pink-600 text-pink-700 hover:bg-pink-600 hover:text-white hover:scale-105 active:scale-95 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-sm">
           Contactar
         </button>
       </div>
@@ -64,127 +73,135 @@
     </div>
   </section>
 
+  <!-- PRODUCTOS CON EFECTOS GLOW Y SOMBRAS AVANZADAS -->
   <section id="productos" class="max-w-7xl mx-auto px-6 py-16 flex-grow">
     
     <div class="text-center mb-14">
       <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Nuestros Productos</h3>
-      <div class="w-16 h-1.5 bg-pink-500 mx-auto rounded-full mt-3"></div>
+      <div class="w-16 h-1.5 bg-pink-500 mx-auto rounded-full mt-3 shadow-md shadow-pink-400"></div>
     </div>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
       
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 1 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Collar Luna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <span class="absolute top-3 left-3 bg-pink-600 text-white text-xs font-extrabold px-3 py-1 rounded-lg shadow-md">Destacado</span>
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Collar Luna</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Collar Luna</h4>
             <p class="text-xs text-slate-500 mb-3">Bañado en plata ley 925 de alta durabilidad.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 45.00</p>
-            <button onclick="alert('¡Collar Luna agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Collar Luna agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 2 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=600&q=80" alt="Aretes Sol" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Aretes Sol</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Aretes Sol</h4>
             <p class="text-xs text-slate-500 mb-3">Diseño minimalista con incrustación de circonia.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 30.00</p>
-            <button onclick="alert('¡Aretes Sol agregados!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Aretes Sol agregados!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 3 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Pulsera Dorada" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <span class="absolute top-3 left-3 bg-indigo-600 text-white text-xs font-extrabold px-3 py-1 rounded-lg shadow-md">Nuevo</span>
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Pulsera Dorada</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Pulsera Dorada</h4>
             <p class="text-xs text-slate-500 mb-3">Acero inoxidable con eslabones pulidos en oro 18K.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 35.00</p>
-            <button onclick="alert('¡Pulsera Dorada agregada!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Pulsera Dorada agregada!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 4 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80" alt="Anillo Cristal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Anillo Cristal</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Anillo Cristal</h4>
             <p class="text-xs text-slate-500 mb-3">Anillo ajustable con gema brillante de corte fino.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 28.00</p>
-            <button onclick="alert('¡Anillo Cristal agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Anillo Cristal agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 5 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=600&q=80" alt="Collar Perlas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Collar Perlas</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Collar Perlas</h4>
             <p class="text-xs text-slate-500 mb-3">Diseño clásico con perlas cultivadas de agua dulce.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 52.00</p>
-            <button onclick="alert('¡Collar Perlas agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Collar Perlas agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 6 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=600&q=80" alt="Aretes Argollas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-          <span class="absolute top-3 left-3 bg-pink-100 text-pink-800 text-xs font-extrabold px-3 py-1 rounded-lg shadow-md border border-pink-200">Popular</span>
+          <span class="absolute top-3 left-3 bg-pink-200 text-pink-900 text-xs font-extrabold px-3 py-1 rounded-lg shadow-md border border-pink-300">Popular</span>
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Aretes Argollas</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Aretes Argollas</h4>
             <p class="text-xs text-slate-500 mb-3">Argollas doradas ligeras y resistentes al agua.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 25.00</p>
-            <button onclick="alert('¡Aretes Argollas agregados!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Aretes Argollas agregados!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 7 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img 
             src="https://images.unsplash.com/photo-1611591475119-218a56b461fa?auto=format&fit=crop&w=600&q=80" 
@@ -195,31 +212,32 @@
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Pulsera Estrellas</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Pulsera Estrellas</h4>
             <p class="text-xs text-slate-500 mb-3">Cadena fina con dije de estrella y acabado brillante.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 32.00</p>
-            <button onclick="alert('¡Pulsera Estrellas agregada!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Pulsera Estrellas agregada!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
         </div>
       </div>
 
-      <div class="group bg-white rounded-2xl border border-pink-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+      <!-- TARJETA 8 -->
+      <div class="group bg-white/90 backdrop-blur-sm rounded-2xl border border-pink-200 shadow-md hover:shadow-2xl hover:shadow-pink-300/50 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
         <div class="relative overflow-hidden bg-slate-100 aspect-square">
           <img src="https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=600&q=80" alt="Juego Elegancia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
           <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs font-extrabold px-3 py-1 rounded-lg shadow-md">Oferta</span>
         </div>
         <div class="p-5 text-center flex-grow flex flex-col justify-between">
           <div>
-            <h4 class="text-lg font-bold text-slate-800 mb-1">Juego Elegancia</h4>
+            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-pink-600 transition-colors">Juego Elegancia</h4>
             <p class="text-xs text-slate-500 mb-3">Set completo de collar y aretes a juego.</p>
           </div>
           <div>
             <p class="text-2xl font-black text-pink-600 mb-3">S/ 65.00</p>
-            <button onclick="alert('¡Juego Elegancia agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-colors duration-200 shadow-md">
+            <button onclick="alert('¡Juego Elegancia agregado!')" class="w-full bg-slate-900 hover:bg-pink-600 active:scale-95 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-200 shadow-md">
               Agregar al carrito
             </button>
           </div>
@@ -227,8 +245,10 @@
       </div>
 
     </div>
+  </section>
 
-  <section id="nosotros" class="bg-white py-20 border-t border-pink-100">
+  <!-- SECCIÓN SOBRE NOSOTROS -->
+  <section id="nosotros" class="bg-white/80 backdrop-blur-sm py-20 border-t border-pink-200">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h3 class="text-3xl sm:text-4xl font-black text-slate-900 mb-6">Sobre Nosotros</h3>
       <p class="text-slate-600 leading-relaxed text-base sm:text-lg max-w-2xl mx-auto font-normal">
@@ -237,18 +257,20 @@
     </div>
   </section>
 
+  <!-- FOOTER CON DERECHOS RESERVADOS A TU NOMBRE -->
   <footer class="bg-slate-900 text-slate-400 text-center py-8 mt-auto border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm font-medium">© 2026 Bella Accesorios</p>
-    </div>
-    <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm font-medium">desarrollado por carlos daniel quispe  <span class="font-bold">Equipo de Desarrollo</span>. Todos los derechos reservados.</p>
+    <div class="max-w-6xl mx-auto px-6 space-y-2">
+      <p class="text-sm font-medium">© 2026 Bella Accesorios Style</p>
+      <p class="text-sm font-medium text-pink-400">
+        Desarrollado por <span class="font-bold text-white">Carlos Daniel Quispe</span>. Todos los derechos reservados.
+      </p>
     </div>
   </footer>
 
-  <div id="modal-catalogo" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-pink-100">
-      <button onclick="toggleModal('modal-catalogo')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+  <!-- MODAL CATÁLOGO -->
+  <div id="modal-catalogo" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4 transition-all duration-300">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-pink-200 animate-in fade-in zoom-in duration-200">
+      <button onclick="toggleModal('modal-catalogo')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold transition-colors">&times;</button>
       <h4 class="text-2xl font-black text-slate-900 mb-2">Catálogo Completo 2026</h4>
       <p class="text-sm text-slate-600 mb-4">Descarga el PDF con el listado oficial y precios de los 8 productos.</p>
       <div class="space-y-3">
@@ -257,36 +279,38 @@
           <span class="text-xs bg-pink-200 text-pink-800 px-2.5 py-1 rounded-lg">PDF Válido</span>
         </div>
       </div>
-      <button onclick="descargarCatalogo()" class="w-full mt-6 bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl transition duration-200 shadow-lg shadow-pink-500/25">
+      <button onclick="descargarCatalogo()" class="w-full mt-6 bg-pink-600 hover:bg-pink-700 active:scale-95 text-white font-bold py-3 rounded-xl transition duration-200 shadow-lg shadow-pink-500/30">
         Descargar Catálogo (PDF)
       </button>
     </div>
   </div>
 
-  <div id="modal-contacto" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
-    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-pink-100">
-      <button onclick="toggleModal('modal-contacto')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+  <!-- MODAL CONTACTO -->
+  <div id="modal-contacto" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4 transition-all duration-300">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl relative border border-pink-200 animate-in fade-in zoom-in duration-200">
+      <button onclick="toggleModal('modal-contacto')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl font-bold transition-colors">&times;</button>
       <h4 class="text-2xl font-black text-slate-900 mb-4">Contáctanos</h4>
       <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito!'); toggleModal('modal-contacto');" class="space-y-4">
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nombre</label>
-          <input type="text" required placeholder="Tu nombre" class="w-full px-3.5 py-2.5 border rounded-xl focus:ring-2 focus:ring-pink-500 outline-none text-sm">
+          <input type="text" required placeholder="Tu nombre" class="w-full px-3.5 py-2.5 border rounded-xl focus:ring-2 focus:ring-pink-500 outline-none text-sm transition-all">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Correo Electrónico</label>
-          <input type="email" required placeholder="correo@ejemplo.com" class="w-full px-3.5 py-2.5 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm">
+          <input type="email" required placeholder="correo@ejemplo.com" class="w-full px-3.5 py-2.5 border rounded-lg focus:ring-2 focus:ring-pink-500 outline-none text-sm transition-all">
         </div>
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mensaje</label>
-          <textarea required rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full px-3.5 py-2.5 border rounded-xl focus:ring-2 focus:ring-pink-500 outline-none text-sm"></textarea>
+          <textarea required rows="3" placeholder="¿En qué podemos ayudarte?" class="w-full px-3.5 py-2.5 border rounded-xl focus:ring-2 focus:ring-pink-500 outline-none text-sm transition-all"></textarea>
         </div>
-        <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-pink-500/25">
+        <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 active:scale-95 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-pink-500/30">
           Enviar Mensaje
         </button>
       </form>
     </div>
   </div>
 
+  <!-- SCRIPTS -->
   <script>
     function toggleModal(modalId) {
       const modal = document.getElementById(modalId);
@@ -314,7 +338,7 @@
       doc.setTextColor(100, 116, 139);
       doc.setFontSize(12);
       doc.setFont("helvetica", "normal");
-      doc.text("Catálogo Oficial de Productos - 2026", 15, 42);
+      doc.text("Catálogo Oficial de Productos - 2026 | Desarrollado por Carlos Daniel Quispe", 15, 42);
 
       const productos = [
         { nombre: "1. Collar Luna", detalle: "Bañado en plata ley 925", precio: "S/ 45.00" },
